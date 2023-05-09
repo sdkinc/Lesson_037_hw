@@ -1,3 +1,5 @@
+package Humanity;
+
 public class Human {
 
   /*
@@ -14,6 +16,7 @@ public class Human {
 
   public Human(String name) {
     this.name = name;
+    setType("Human");
   }
 
   public String getName() {
@@ -28,12 +31,16 @@ public class Human {
     this.type = type;
   }
 
+  protected String getType() {
+    return type;
+  }
+
   public String greet() {
     return "i was born!";
   }
 
   @Override
   public String toString() {
-    return type + " with name " + getName();
+    return getType() + " with name " + getName();
   }
 }
